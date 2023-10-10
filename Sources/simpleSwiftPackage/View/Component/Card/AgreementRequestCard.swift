@@ -34,7 +34,7 @@ public struct AgreementRequestCard: View {
                 VStack(alignment: .leading){
                     
                     VStack(alignment: .leading) {
-                        Text("AgreementRequestCardFromTitle")
+                        Text("AgreementRequestCardFromTitle", bundle: .module)
                             .font(.caption)
                             .foregroundColor(.gray)
                         Text(client_name)
@@ -44,7 +44,7 @@ public struct AgreementRequestCard: View {
                     }
                     
                     VStack(alignment: .leading) {
-                        Text("AgreementRequestCardToTitle")
+                        Text("AgreementRequestCardToTitle", bundle: .module)
                             .font(.caption)
                             .foregroundColor(.gray)
                         Text(user_name)
@@ -60,7 +60,7 @@ public struct AgreementRequestCard: View {
                 
                 VStack(alignment: .leading){
                     VStack(alignment: .leading){
-                        Text("AgreementRequestCardAgreementMethodTitle")
+                        Text("AgreementRequestCardAgreementMethodTitle", bundle: .module)
                             .font(.caption)
                             .foregroundColor(.gray)
                         HStack{
@@ -73,7 +73,7 @@ public struct AgreementRequestCard: View {
                     .padding(.top, 4)
                     
                     VStack(alignment: .leading){
-                        Text("AgreementRequestCardRequestingInfoTitle")
+                        Text("AgreementRequestCardRequestingInfoTitle", bundle: .module)
                             .font(.caption)
                             .foregroundColor(.gray)
                         HStack{
@@ -104,7 +104,7 @@ public struct AgreementRequestCard: View {
             }
             
             VStack(alignment: .leading){
-                Text("AgreementRequestCardContentTitle")
+                Text("AgreementRequestCardContentTitle", bundle: .module)
                     .font(.caption)
                     .foregroundColor(.gray)
                 Text(content)
@@ -116,7 +116,7 @@ public struct AgreementRequestCard: View {
             
             HStack{
                 VStack(alignment: .leading){
-                    Text("AgreementRequestCardDateTitle")
+                    Text("AgreementRequestCardDateTitle", bundle: .module)
                         .font(.caption)
                         .foregroundColor(.gray)
                     Text(DateUtils.getNow())

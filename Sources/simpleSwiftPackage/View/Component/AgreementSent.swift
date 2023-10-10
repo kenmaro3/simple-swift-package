@@ -41,11 +41,11 @@ struct AgreementSent: View {
             .opacity(showView ? 1 : 0)
             
             VStack(alignment: .leading, spacing: 10){
-                Text("DeepLinkAgreementSentTitle")
+                Text("DeepLinkAgreementSentTitle", bundle: .module)
                     .font(.system(size: 40))
                     .fontWeight(.black)
                 
-                Text("DeepLinkAgreementSentSubTitle")
+                Text("DeepLinkAgreementSentSubTitle", bundle: .module)
                     .font(.caption)
                     .foregroundColor(.gray)
                     .padding(.top, 15)
@@ -65,7 +65,7 @@ struct AgreementSent: View {
                     }
 
                 }){
-                    Text("DeepLinkAgreementSentGoBackLabel")
+                    Text("DeepLinkAgreementSentGoBackLabel", bundle: .module)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .frame(width: size.width*0.4)

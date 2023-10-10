@@ -252,7 +252,7 @@ public struct AgreementSteps: View, IndividualNumberReaderSessionDelegate {
                     handleSubmission()
                 }) {
                     HStack(spacing: 15){
-                        Text("DeepLinkAgreementStepsSubmitLabel")
+                        Text("DeepLinkAgreementStepsSubmitLabel", bundle: .module)
                             .fontWeight(.semibold)
                             .contentTransition(.identity)
                             .foregroundColor(.white)
@@ -304,15 +304,15 @@ public struct AgreementSteps: View, IndividualNumberReaderSessionDelegate {
             //                }
             if(alertType == "agreement_send_failed"){
                 return Alert(
-                    title: Text("DeepLinkAgreementStepsAgreementFailedTitle"),
-                    message: Text("DeepLinkAgreementStepsAgreementFailedMessage"),
-                    dismissButton: .default(Text("DeepLinkAgreementStepsAgreementFailedButton")))
+                    title: Text("DeepLinkAgreementStepsAgreementFailedTitle", bundle: .module),
+                    message: Text("DeepLinkAgreementStepsAgreementFailedMessage", bundle: .module),
+                    dismissButton: .default(Text("DeepLinkAgreementStepsAgreementFailedButton", bundle: .module)))
                 
             }else{
                 return Alert(
-                    title: Text("DeepLinkAgreementStepsUnknownAlertTitle"),
-                    message: Text("DeepLinkAgreementStepsUnknownAlertMessage"),
-                    dismissButton: .default(Text("DeepLinkAgreementStepsUnknownAlertButton")))
+                    title: Text("DeepLinkAgreementStepsUnknownAlertTitle", bundle: .module),
+                    message: Text("DeepLinkAgreementStepsUnknownAlertMessage", bundle: .module),
+                    dismissButton: .default(Text("DeepLinkAgreementStepsUnknownAlertButton", bundle: .module)))
                 
             }
         }
@@ -345,14 +345,14 @@ public struct AgreementSteps: View, IndividualNumberReaderSessionDelegate {
             .frame(height: UIScreen.main.bounds.height / 2)
         }
         .sheet(isPresented: $isShowPinField) {
-            PasscodeField(description: String(localized: "PasscodeFieldDescriptionForSignature")){ value in
+            PasscodeField(description: String(localized: "PasscodeFieldDescriptionForSignature", bundle: .module)){ value in
                 print("from PasscodeField, value: \(value)")
                 pin = value
                 return
             }
         }
         .overlay(
-            OverlayView(content: String(localized: "OverlayViewSendingAgreementLabel"))
+            OverlayView(content: String(localized: "OverlayViewSendingAgreementLabel", bundle: .module))
                 .opacity(isOverlayVisible ? 1 : 0) // Control the visibility of the overlay
         )
         .onChange(of: isShowPinField, perform: {newValue in

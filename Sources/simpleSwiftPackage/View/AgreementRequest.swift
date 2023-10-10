@@ -162,7 +162,7 @@ struct AgreementRequest: View {
                             deleteAppStorageForDynamicLink()
                         }
                     }){
-                        Text("DeepLinkAgreementCancel")
+                        Text("DeepLinkAgreementCancel", bundle: .module)
                             .fontWeight(.semibold)
                             .frame(width: 120, height: 32)
                             .foregroundColor(Color(.white))
@@ -211,12 +211,12 @@ struct AgreementRequest: View {
                             VStack(alignment: .leading, spacing: 10){
                                 
                                 VStack(alignment: .leading, spacing: 10){
-                                    Text("DeepLinkAgreementRequestTitle")
+                                    Text("DeepLinkAgreementRequestTitle", bundle: .module)
                                         .font(.title)
                                         .fontWeight(.bold)
                                         .foregroundColor(.black)
                                     
-                                    Text("DeepLinkAgreementRequestSubTitle")
+                                    Text("DeepLinkAgreementRequestSubTitle", bundle: .module)
                                         .font(.caption)
                                         .foregroundColor(.gray)
                                 }
@@ -260,7 +260,7 @@ struct AgreementRequest: View {
                                         isAlertOpen = true
                                     }
                                 }) {
-                                    Text("DeepLinkAgreementToStepButton")
+                                    Text("DeepLinkAgreementToStepButton", bundle: .module)
                                         .fontWeight(.semibold)
                                         .contentTransition(.identity)
                                         .foregroundColor(.white)
@@ -287,26 +287,26 @@ struct AgreementRequest: View {
                     }
                     .alert(isPresented: $isAlertOpen) {
                         if(isUserDataNotReadyForAgreement){
-                            return Alert(title: Text("AgreementRequestUserDataNotReadyAlertTitle"),
-                                         message: Text("AgreementRequestUserDataNotReadyAlertDescription"),
-                                         primaryButton: .default(Text("AgreementRequestUserDataNotReadyAlertPrimaryButtonLabel")) {
+                            return Alert(title: Text("AgreementRequestUserDataNotReadyAlertTitle", bundle: .module),
+                                         message: Text("AgreementRequestUserDataNotReadyAlertDescription", bundle: .module),
+                                         primaryButton: .default(Text("AgreementRequestUserDataNotReadyAlertPrimaryButtonLabel", bundle: .module)) {
                                 // Perform the action when the user taps "Yes"
                                 print("Button tapped!")
                                 isAlertOpen = false
                                 
                             },
-                                         secondaryButton: .cancel(Text("AgreementRequestUserDataNotReadyAlertSecondaryButtonLabel")))
+                                         secondaryButton: .cancel(Text("AgreementRequestUserDataNotReadyAlertSecondaryButtonLabel", bundle: .module)))
                             
                         }else{
-                            return Alert(title: Text("AgreementRequestUserCertificateNotReadyAlertTitle"),
-                                         message: Text("AgreementRequestUserCertificateNotReadyAlertDescription"),
-                                         primaryButton: .default(Text("AgreementRequestUserCertificateNotReadyAlertPrimaryButtonLabel")) {
+                            return Alert(title: Text("AgreementRequestUserCertificateNotReadyAlertTitle", bundle: .module),
+                                         message: Text("AgreementRequestUserCertificateNotReadyAlertDescription", bundle: .module),
+                                         primaryButton: .default(Text("AgreementRequestUserCertificateNotReadyAlertPrimaryButtonLabel", bundle: .module)) {
                                 // Perform the action when the user taps "Yes"
                                 print("Button tapped!")
                                 isAlertOpen = false
                                 
                             },
-                                         secondaryButton: .cancel(Text("AgreementRequestUserCertificateNotReadyAlertSecondaryButtonLabel")))
+                                         secondaryButton: .cancel(Text("AgreementRequestUserCertificateNotReadyAlertSecondaryButtonLabel", bundle: .module)))
                         }
                     }
                 }

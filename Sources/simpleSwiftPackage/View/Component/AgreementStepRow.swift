@@ -20,7 +20,7 @@ public struct AgreementStepRow: View {
             }
             
             VStack(alignment: .leading){
-                Text("DeepLinkAgreementStepRowStepTitle \(index)")
+                Text("DeepLinkAgreementStepRowStepTitle \(index)", bundle: .module)
                     .font(.callout)
                     .fontWeight(.semibold)
                     .foregroundColor(.gray)
@@ -28,7 +28,7 @@ public struct AgreementStepRow: View {
                 
                 switch method{
                 case .faceid:
-                    Text("AgreementMethodFaceID")
+                    Text("AgreementMethodFaceID", bundle: .module)
                         .font(.headline)
                         .fontWeight(.semibold)
                         .padding(.top, 4)
@@ -38,12 +38,12 @@ public struct AgreementStepRow: View {
 //                        .fontWeight(.semibold)
 //                        .padding(.top, 4)
                 case .mnc:
-                    Text("AgreementMethodMyNumberCard")
+                    Text("AgreementMethodMyNumberCard", bundle: .module)
                         .font(.headline)
                         .fontWeight(.semibold)
                         .padding(.top, 4)
                 case .signature:
-                    Text("AgreementMethodSignature")
+                    Text("AgreementMethodSignature", bundle: .module)
                         .font(.headline)
                         .fontWeight(.semibold)
                         .padding(.top, 4)

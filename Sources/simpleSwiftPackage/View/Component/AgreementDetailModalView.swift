@@ -18,7 +18,7 @@ public struct AgreementDetailModalView: View {
                 Section {
                     if(ref_id != ""){
                         HStack(){
-                            Text("AgreementDetailModalRefIdLabel")
+                            Text("AgreementDetailModalRefIdLabel", bundle: .module)
                                 .font(.subheadline)
                             Spacer()
                             Text(ref_id)
@@ -26,7 +26,7 @@ public struct AgreementDetailModalView: View {
                         }
                     }
                     HStack(){
-                        Text("AgreementDetailModalClientNameLabel")
+                        Text("AgreementDetailModalClientNameLabel", bundle: .module)
                             .font(.subheadline)
                         Spacer()
                         Text(client_name)
@@ -34,7 +34,7 @@ public struct AgreementDetailModalView: View {
                     }
                     
                     HStack(){
-                        Text("AgreementDetailModalUserNameLabel")
+                        Text("AgreementDetailModalUserNameLabel", bundle: .module)
                             .font(.subheadline)
                         Spacer()
                         Text(user_name)
@@ -42,7 +42,7 @@ public struct AgreementDetailModalView: View {
                     }
                     if(date != ""){
                         HStack(){
-                            Text("AgreementDetailModalDateLabel")
+                            Text("AgreementDetailModalDateLabel", bundle: .module)
                                 .font(.subheadline)
                             Spacer()
                             Text(date)
@@ -50,79 +50,79 @@ public struct AgreementDetailModalView: View {
                         }
                     }
                 } header: {
-                    Text("AgreementDetailModalHeaderBasic")
+                    Text("AgreementDetailModalHeaderBasic", bundle: .module)
                 }
                 
                 Section {
                     if(methods.face_id){
                         HStack(){
-                            Text("AgreementDetailModalAgreementMethodFaceIdLabel")
+                            Text("AgreementDetailModalAgreementMethodFaceIdLabel", bundle: .module)
                         }
                     }
                     if(methods.my_number_card){
                         HStack(){
-                            Text("AgreementDetailModalAgreementMethodMncLabel")
+                            Text("AgreementDetailModalAgreementMethodMncLabel", bundle: .module)
                         }
                     }
                     if(methods.signature){
                         HStack(){
-                            Text("AgreementDetailModalAgreementMethodSignatureLabel")
+                            Text("AgreementDetailModalAgreementMethodSignatureLabel", bundle: .module)
                         }
                     }
                     
                 } header: {
-                    Text("AgreementDetailModalHeaderAgreementMethod")
+                    Text("AgreementDetailModalHeaderAgreementMethod", bundle: .module)
                 }
                 
                 Section {
                     
                     if(agreementModel.name){
                         HStack(){
-                            Text("AgreementDetailModalRequestingInfoNameLabel")
+                            Text("AgreementDetailModalRequestingInfoNameLabel", bundle: .module)
                         }
                     }
                     if(agreementModel.birthday){
                         HStack(){
-                            Text("AgreementDetailModalRequestingInfoBirthdayLabel")
+                            Text("AgreementDetailModalRequestingInfoBirthdayLabel", bundle: .module)
                         }
                     }
                     if(agreementModel.age){
                         HStack(){
-                            Text("AgreementDetailModalRequestingInfoAgeLabel")
+                            Text("AgreementDetailModalRequestingInfoAgeLabel", bundle: .module)
                         }
                     }
                     if(agreementModel.sex){
                         HStack(){
-                            Text("AgreementDetailModalRequestingInfoSexLabel")
+                            Text("AgreementDetailModalRequestingInfoSexLabel", bundle: .module)
                         }
                     }
                     if(agreementModel.address){
                         HStack(){
-                            Text("AgreementDetailModalRequestingInfoAddressLabel")
+                            Text("AgreementDetailModalRequestingInfoAddressLabel", bundle: .module)
                         }
                     }
                     if(agreementModel.email){
                         HStack(){
-                            Text("AgreementDetailModalRequestingInfoEmailLabel")
+                            Text("AgreementDetailModalRequestingInfoEmailLabel", bundle: .module)
                         }
                     }
                     if(agreementModel.phone){
                         HStack(){
-                            Text("AgreementDetailModalRequestingInfoPhoneLabel")
+                            Text("AgreementDetailModalRequestingInfoPhoneLabel", bundle: .module)
                         }
                     }
                 } header: {
-                    Text("AgreementDetailModalHeaderRequestingInfo")
+                    Text("AgreementDetailModalHeaderRequestingInfo", bundle: .module)
                 }
                 
                 Section {
                     Text(content)
                         .font(.subheadline)
                 } header: {
-                    Text("AgreementDetailModalHeaderContent")
+                    Text("AgreementDetailModalHeaderContent", bundle: .module)
                 }
             }
-            .navigationTitle(String(localized: "AgreementDetailModalTitle"))
+            .navigationTitle(String(localized: "AgreementDetailModalTitle", bundle: .module))
         }
     }
 }
