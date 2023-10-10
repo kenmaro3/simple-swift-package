@@ -172,7 +172,7 @@ public struct MNCRegister: View, IndividualNumberReaderSessionDelegate  {
             .onAppear{
                 print("onAppear")
                 reader = IndividualNumberReader(delegate: self)
-//                reader.get_no_need_pin(items: [.getCertificate])
+                reader.get_no_need_pin(items: [.getCertificate])
             }
             
         }
