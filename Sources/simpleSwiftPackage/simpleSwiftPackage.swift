@@ -67,3 +67,117 @@ public struct AnimatedMenuBar: View {
  
     }
 }
+
+import SwiftUI
+import TRETJapanNFCReader_MIFARE_IndividualNumber
+import ASN1Decoder
+
+public struct MNCRegister: View, IndividualNumberReaderSessionDelegate  {
+    @State private var isSkipped: Bool = false
+    // MARK: App Mnc Register Status
+    @AppStorage("mnc_register_status") var mncRegisterStatus: Bool = false
+    
+    public func individualNumberReaderSession(didRead individualNumberCardData: TRETJapanNFCReader_MIFARE_IndividualNumber.IndividualNumberCardData) {
+        print("individualNumberReaderSession")
+        print(individualNumberCardData)
+        
+        guard let tmp_pem_before = individualNumberCardData.certificate_pem_before else{
+            return
+        }
+        
+        guard let _ = try? X509Certificate(data: tmp_pem_before) else {
+            //session.invalidate(errorMessage: "X509Certificate Parse Error")
+            return
+        }
+        
+        let INDENTATION = "\n"
+        let BEGIN_CERT = "-----BEGIN CERTIFICATE-----"
+        let END_CERT = "-----END CERTIFICATE-----"
+        
+        
+        let encoded = tmp_pem_before.base64EncodedString(options: Data.Base64EncodingOptions.lineLength64Characters)
+        
+        //individualNumberCard.data.certificate_pem = BEGIN_CERT + INDENTATION + encoded + INDENTATION + END_CERT
+        let encoded_pem = BEGIN_CERT + INDENTATION + encoded + INDENTATION + END_CERT
+        
+//        APIClient.postCertificateToFastAPI(certificate_pem_string: encoded_pem){_ in
+//            //MARK: User Logged in Successfully
+//            print("Success!")
+//            withAnimation(.easeInOut){
+//                mncRegisterStatus = true
+//            }
+//        }
+        
+        
+    }
+
+    public func japanNFCReaderSession(didInvalidateWithError error: Error) {
+        print("japanNFCReaderSession")
+    }
+    
+    // MARK: Handling Error
+    func handleError(error: Error) async{
+        await MainActor.run(body: {
+            //errorMessage = error.localizedDescription
+            //showError.toggle()
+        })
+    }
+    
+    @State var reader: IndividualNumberReader!
+    
+//    func skipTapped(){
+//        print("skipTapped")
+//        isSkipped = true
+//    }
+    
+    public var body: some View {
+        if isSkipped{
+            Text("skipped")
+        }else{
+            VStack(alignment: .leading, spacing: 15){
+                
+                
+                VStack(alignment: .leading){
+                    (Text("MNCRegisterScanLabel")
+                        .foregroundColor(.black) +
+                     Text("MNCRegisterScanLabel2")
+                        .foregroundColor(.black)
+                    )
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .padding(.bottom)
+                    
+                    (Text("MNCRegisterScanSecondLabel1") +
+                     Text("MNCRegisterScanSecondLabel2") +
+                     Text("MNCRegisterScanSecondLabel3")
+                    )
+                    .font(.callout)
+                    .foregroundColor(.gray)
+                    
+                    Image("Password_Flatline")
+                        .resizable()
+                        .frame(width: 300, height: 225)
+                        .padding(.top, 20)
+                        .padding(.bottom, 20)
+                        .padding(.horizontal)
+                    
+                }
+                .padding(.trailing, 40)
+                .padding(.leading, 40)
+                
+            }
+            .onAppear{
+                reader = IndividualNumberReader(delegate: self)
+                reader.get_no_need_pin(items: [.getCertificate])
+            }
+            
+        }
+    }
+}
+
+struct MNCRegister_Previews: PreviewProvider {
+    static var previews: some View {
+        MNCRegister()
+    }
+}
+
