@@ -17,7 +17,8 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/kenmaro3/TRETJapanNFCReader.git", from: "0.0.0"),
-        .package(url: "https://github.com/filom/ASN1Decoder.git", from: "1.9.0")
+        .package(url: "https://github.com/filom/ASN1Decoder.git", from: "1.9.0"),
+        .package(url: "https://github.com/Alamofire/Alamofire", from: "5.8.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -26,7 +27,8 @@ let package = Package(
             name: "simpleSwiftPackage",
             dependencies: [
                 .product(name: "TRETJapanNFCReader-MIFARE-IndividualNumber", package: "TRETJapanNFCReader"),      // (1)
-                .product(name: "ASN1Decoder", package: "ASN1Decoder")
+                .product(name: "ASN1Decoder", package: "ASN1Decoder"),
+                .product(name: "Alamofire", package: "Alamofire")
             ],
             resources: [.process("Resources")]), // - NEW
         .testTarget(
