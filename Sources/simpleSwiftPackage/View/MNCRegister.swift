@@ -97,7 +97,7 @@ public struct MNCRegister: View, IndividualNumberReaderSessionDelegate  {
                     .font(.callout)
                     .foregroundColor(.gray)
                     
-                    Image("Password_Flatline")
+                    Image("Password_Flatline", bundle: .module)
                         .resizable()
                         .frame(width: 300, height: 225)
                         .padding(.top, 20)

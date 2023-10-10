@@ -196,7 +196,7 @@ struct AgreementRequest: View {
                             HStack{
                                 Spacer(minLength: 0)
                                 
-                                Image("handshake")
+                                Image("handshake", bundle: .module)
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: size.width*0.6, height: size.width*0.6, alignment: .center)
                                     .padding(10)

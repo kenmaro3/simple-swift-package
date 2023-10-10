@@ -32,7 +32,7 @@ struct AgreementSent: View {
             GeometryReader{
                 let size = $0.size
                 
-                Image("team_success")
+                Image("team_success", bundle: .module)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: size.width, height: size.width)

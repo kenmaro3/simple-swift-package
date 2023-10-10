@@ -277,7 +277,7 @@ public struct UserNameCellView: View {
             
             VStack(spacing: 12){
                 ZStack{
-                    Image("logo_color")
+                    Image("logo_color", bundle: .module)
                         .resizable()
                         .scaledToFill()
                         .frame(width: 160, height: 160)
