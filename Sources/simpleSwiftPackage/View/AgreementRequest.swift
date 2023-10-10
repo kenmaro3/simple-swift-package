@@ -1,6 +1,8 @@
 import SwiftUI
 
-struct AgreementRequest: View {
+public struct AgreementRequest: View {
+    public init(){
+    }
     
     // MARK: AppStorage
     @AppStorage("authblue_mnc_register_status") var mncRegisterStatus: Bool = false
@@ -117,7 +119,7 @@ struct AgreementRequest: View {
     }
     
     
-    var body: some View {
+    public var body: some View {
         if(goToAgreementSteps){
             GeometryReader{
                 let size = $0.size
