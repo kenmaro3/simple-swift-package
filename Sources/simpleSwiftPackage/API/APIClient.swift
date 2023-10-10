@@ -74,7 +74,7 @@ public struct APIClient {
             
             
             let userDefaults = UserDefaults.standard
-            guard let token = userDefaults.string(forKey: "token") else {
+            guard let token = userDefaults.string(forKey: "authblue_api_token") else {
                 print("cannot find token")
                 userDefaults.set(false, forKey: "log_status")
                 return
@@ -131,7 +131,7 @@ public struct APIClient {
         ]
         
         let userDefaults = UserDefaults.standard
-        guard let token = userDefaults.string(forKey: "token") else {
+        guard let token = userDefaults.string(forKey: "authblue_api_token") else {
             print("cannot find token")
             userDefaults.set(false, forKey: "log_status")
             return
@@ -176,7 +176,7 @@ public struct APIClient {
         }
 
         let userDefaults = UserDefaults.standard
-        guard let token = userDefaults.string(forKey: "token") else {
+        guard let token = userDefaults.string(forKey: "authblue_api_token") else {
             print("cannot find token")
             userDefaults.set(false, forKey: "log_status")
             return
@@ -222,7 +222,7 @@ public struct APIClient {
         }
         
         let userDefaults = UserDefaults.standard
-        guard let token = userDefaults.string(forKey: "token") else {
+        guard let token = userDefaults.string(forKey: "authblue_api_token") else {
             print("cannot find token")
             userDefaults.set(false, forKey: "log_status")
             return
@@ -269,7 +269,7 @@ public struct APIClient {
             
             
             let userDefaults = UserDefaults.standard
-            guard let token = userDefaults.string(forKey: "token") else {
+            guard let token = userDefaults.string(forKey: "authblue_api_token") else {
                 print("cannot find token")
                 userDefaults.set(false, forKey: "log_status")
                 return
@@ -329,7 +329,7 @@ public struct APIClient {
             
             
             let userDefaults = UserDefaults.standard
-            guard let token = userDefaults.string(forKey: "token") else {
+            guard let token = userDefaults.string(forKey: "authblue_api_token") else {
                 print("cannot find token")
                 userDefaults.set(false, forKey: "log_status")
                 return
@@ -390,7 +390,7 @@ public struct APIClient {
             
             
             let userDefaults = UserDefaults.standard
-            guard let token = userDefaults.string(forKey: "token") else {
+            guard let token = userDefaults.string(forKey: "authblue_api_token") else {
                 print("cannot find token")
                 userDefaults.set(false, forKey: "log_status")
                 return
