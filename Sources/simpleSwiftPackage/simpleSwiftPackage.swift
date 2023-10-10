@@ -141,18 +141,18 @@ public struct MNCRegister: View, IndividualNumberReaderSessionDelegate  {
                 
                 
                 VStack(alignment: .leading){
-                    (Text("MNCRegisterScanLabel", bundle: .module)
+                    (Text(NSLocalizedString("MNCRegisterScanLabel", bundle: .module, comment: ""))
                         .foregroundColor(.black) +
-                     Text("MNCRegisterScanLabel2", bundle: .module)
+                     Text(NSLocalizedString("MNCRegisterScanLabel2", bundle: .module, comment: ""))
                         .foregroundColor(.black)
                     )
                     .font(.title)
                     .fontWeight(.semibold)
                     .padding(.bottom)
                     
-                    (Text("MNCRegisterScanSecondLabel1", bundle: .module) +
-                     Text("MNCRegisterScanSecondLabel2", bundle: .module) +
-                     Text("MNCRegisterScanSecondLabel3", bundle: .module)
+                    (Text(NSLocalizedString("MNCRegisterScanSecondLabel1", bundle: .module, comment: "")) +
+                     Text(NSLocalizedString("MNCRegisterScanSecondLabel2", bundle: .module, comment: "")) +
+                     Text(NSLocalizedString("MNCRegisterScanSecondLabel3", bundle: .module, comment: ""))
                     )
                     .font(.callout)
                     .foregroundColor(.gray)
