@@ -15,20 +15,20 @@ public struct CertificateRegisterResponseAPI: Codable{
     let has_error: Bool
     let error_message: String?
     let req_id: String
-    let result: CertificateRegisterResponse?
+    public let result: CertificateRegisterResponse?
 }
 
 public struct createUserWithAuthResponse: Codable{
     let user_id: String
     let username: String
-    let access_token: String
+    public let access_token: String
 }
 
 public struct createUserWithAuthResponseAPI: Codable{
     let has_error: Bool
     let error_message: String?
     let req_id: String
-    let result: createUserWithAuthResponse?
+    public let result: createUserWithAuthResponse?
 }
 
 struct AuthAgreementWithQRRequest: Codable{
