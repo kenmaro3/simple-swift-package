@@ -8,9 +8,9 @@
 import Foundation
 import Alamofire
 
-struct APIClient {
+public struct APIClient {
     
-    static func createUserWithAuth(username: String, email: String, handler: @escaping ResultHandler<createUserWithAuthResponseAPI>){
+    public static func createUserWithAuth(username: String, email: String, handler: @escaping ResultHandler<createUserWithAuthResponseAPI>){
         let apiHost = Bundle.main.object(forInfoDictionaryKey: "authblue_api_host") as! String
         let urlString = "\(apiHost)/users_with_auth_mobile"
         print("\n\nhere!!!!!")

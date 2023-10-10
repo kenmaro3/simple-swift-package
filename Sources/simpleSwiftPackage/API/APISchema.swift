@@ -18,13 +18,13 @@ public struct CertificateRegisterResponseAPI: Codable{
     let result: CertificateRegisterResponse?
 }
 
-struct createUserWithAuthResponse: Codable{
+public struct createUserWithAuthResponse: Codable{
     let user_id: String
     let username: String
     let access_token: String
 }
 
-struct createUserWithAuthResponseAPI: Codable{
+public struct createUserWithAuthResponseAPI: Codable{
     let has_error: Bool
     let error_message: String?
     let req_id: String
