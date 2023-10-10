@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  
+
+  Created by Kentaro Mihara on 2023/10/10.
+  
+*/
+
+"MNCRegisterScanLabel" = "Scan your ";
+"MNCRegisterScanLabel2" = "\nmy number card";
+"MNCRegisterScanSecondLabel1" = "Please scan your my number card";
+"MNCRegisterScanSecondLabel2" = "to register your certificate from my number card";
+"MNCRegisterScanSecondLabel3" = "\nto proceed forward";
+"MNCRegisterScanSkipButtonLabel" = "Skip";

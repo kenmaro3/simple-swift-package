@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "simpleSwiftPackage",
+    defaultLocalization: "ja",   // - NEW
     platforms: [
         .iOS(.v16)
     ],
@@ -26,7 +27,8 @@ let package = Package(
             dependencies: [
                 .product(name: "TRETJapanNFCReader-MIFARE-IndividualNumber", package: "TRETJapanNFCReader"),      // (1)
                 .product(name: "ASN1Decoder", package: "ASN1Decoder")
-            ]),
+            ],
+            resources: [.process("Resources")]), // - NEW
         .testTarget(
             name: "simpleSwiftPackageTests",
             dependencies: ["simpleSwiftPackage"]),
