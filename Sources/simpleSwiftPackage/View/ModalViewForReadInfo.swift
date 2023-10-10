@@ -207,7 +207,7 @@ public struct ModalViewForReadInfoFromMNC: View, IndividualNumberReaderSessionDe
             }
         }
         .sheet(isPresented: $isShowPinField) {
-            PasscodeField(description: String(localized: "PasscodeFieldDescriptionForGettingInfo")){ value in
+            PasscodeField(description: String(localized: "PasscodeFieldDescriptionForGettingInfo", bundle: .module)){ value in
                 print("from PasscodeField, value: \(value)")
                 isShowPinField = false
                 pin = value
@@ -285,7 +285,7 @@ public struct UserNameCellView: View {
     
                 }
                 
-                Toggle("AboutUserInfoShowToggleLabel", isOn: $activateGlassMorphism)
+                Toggle(NSLocalizedString("AboutUserInfoShowToggleLabel", bundle: .module, comment: ""), isOn: $activateGlassMorphism)
                     .font(.title3)
                     .fontWeight(.semibold)
                     .foregroundColor(.black)

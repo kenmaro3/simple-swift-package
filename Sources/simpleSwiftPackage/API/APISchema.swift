@@ -48,18 +48,18 @@ struct DeleteUserResponseAPI: Codable{
     let result: DeleteUserResponse?
 }
 
-struct AuthAgreementWithQRResponse: Codable{
+public struct AuthAgreementWithQRResponse: Codable{
     let ref_code: String
 }
 
-struct AuthAgreementWithQRResponseAPI: Codable{
+public struct AuthAgreementWithQRResponseAPI: Codable{
     let has_error: Bool
     let error_message: String?
     let req_id: String
-    let result: AuthAgreementWithQRResponse?
+    public let result: AuthAgreementWithQRResponse?
 }
 
-struct AgreementRequestModel: Codable{
+public struct AgreementRequestModel: Codable{
     let id: String
     let client_id: String
     let client_name: String
@@ -68,34 +68,34 @@ struct AgreementRequestModel: Codable{
     let agreement_method: AgreementMethod
 }
 
-struct AgreementRequestResponseAPI: Codable{
+public struct AgreementRequestResponseAPI: Codable{
     let has_error: Bool
     let error_message: String?
     let req_id: String
-    let result: AgreementRequestModel?
+    public let result: AgreementRequestModel?
 }
 
 
-struct NonceResult: Codable {
+public struct NonceResult: Codable {
     let nonce: String
 }
 
-struct RequestNonceResponseAPI: Codable{
+public struct RequestNonceResponseAPI: Codable{
     let has_error: Bool
     let error_message: String?
     let req_id: String
-    let result: NonceResult?
+    public let result: NonceResult?
 }
 
-struct RequestCertificateExistsResponse: Codable {
+public struct RequestCertificateExistsResponse: Codable {
     let exists: Bool
 }
 
-struct RequestCertificateExistsResponseAPI: Codable {
+public struct RequestCertificateExistsResponseAPI: Codable {
     let has_error: Bool
     let error_message: String?
     let req_id: String
-    let result: RequestCertificateExistsResponse?
+    public let result: RequestCertificateExistsResponse?
 }
 
 public enum APIError: Error {

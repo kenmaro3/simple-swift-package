@@ -28,6 +28,15 @@
       }
     },
     {
+      "identity" : "swiftui-digital-signature",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/globulus/swiftui-digital-signature",
+      "state" : {
+        "revision" : "e4cc06d0f6c785dcb69ffc60cc1ffbd40eb02e18",
+        "version" : "0.1.2"
+      }
+    },
+    {
       "identity" : "tretjapannfcreader",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kenmaro3/TRETJapanNFCReader.git",

@@ -19,7 +19,7 @@ public struct PasscodeField: View {
         VStack(spacing: 40) {
             Text(description)
                 .padding()
-            Text("PasscodeFieldLabel").font(.callout)
+            Text("PasscodeFieldLabel", bundle: .module).font(.callout)
                 .padding()
             ZStack {
                 pinDots
