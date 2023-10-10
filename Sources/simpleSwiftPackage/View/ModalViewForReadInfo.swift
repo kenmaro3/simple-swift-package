@@ -104,7 +104,7 @@ public struct ModalViewForReadInfoFromMNC: View, IndividualNumberReaderSessionDe
         
         setSex(sex_string)
         
-        handler
+        handler()
         
     }
     
