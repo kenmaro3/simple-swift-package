@@ -65,16 +65,16 @@ public struct ModalViewForReadInfoFromMNC: View, IndividualNumberReaderSessionDe
         var sex_index_tmp = Array(sex_data)
         let sex_index = String(decoding: sex_index_tmp, as: UTF8.self)
         
-        var sex_string = String(localized: "HomeReadInfoSexLabelUnknown")
+        var sex_string = String(localized: "HomeReadInfoSexLabelUnknown", bundle: .module)
         switch(sex_index){
         case "1":
-            sex_string = String(localized: "HomeReadInfoSexLabelMan")
+            sex_string = String(localized: "HomeReadInfoSexLabelMan", bundle: .module)
         case "2":
-            sex_string = String(localized: "HomeReadInfoSexLabelWoman")
+            sex_string = String(localized: "HomeReadInfoSexLabelWoman", bundle: .module)
         case "9":
-            sex_string = String(localized: "HomeReadInfoSexLabelNotApplicable")
+            sex_string = String(localized: "HomeReadInfoSexLabelNotApplicable", bundle: .module)
         default:
-            sex_string = String(localized: "HomeReadInfoSexLabelUnknown")
+            sex_string = String(localized: "HomeReadInfoSexLabelUnknown", bundle: .module)
         }
         
         setName(name_string)
@@ -167,7 +167,7 @@ public struct ModalViewForReadInfoFromMNC: View, IndividualNumberReaderSessionDe
                 
 
             }
-            .navigationTitle(String(localized: "HomeSettingsNavigationTitleAbout"))
+            .navigationTitle(String(localized: "HomeSettingsNavigationTitleAbout", bundle: .module))
             .navigationBarItems(
                 
                 trailing: HStack {
@@ -177,12 +177,12 @@ public struct ModalViewForReadInfoFromMNC: View, IndividualNumberReaderSessionDe
                     }, label: {
                         HStack(spacing: 15){
                             if(personalName == ""){
-                                Text("HomeReadInfoButtonTitleWarning")
+                                Text("HomeReadInfoButtonTitleWarning", bundle: .module)
                                     .fontWeight(.semibold)
                                     .contentTransition(.identity)
                                     .foregroundColor(.red)
                             }else{
-                                Text("HomeReadInfoButtonTitle")
+                                Text("HomeReadInfoButtonTitle", bundle: .module)
                                     .fontWeight(.semibold)
                                     .contentTransition(.identity)
                                     .foregroundColor(.black)
@@ -365,14 +365,14 @@ public struct UserNameCellView: View {
 //
 //                }
                 HStack(spacing: 8){
-                    Text("HomeReadInfoNameLabel")
+                    Text("HomeReadInfoNameLabel", bundle: .module)
                         .modifier(CustomModifier(font: .subheadline))
                     Text(personalName)
                         .modifier(CustomModifier(font: .caption))
                 }
 
                 HStack(spacing: 8){
-                    Text("HomeReadInfoBirthdayLabel")
+                    Text("HomeReadInfoBirthdayLabel", bundle: .module)
                         .modifier(CustomModifier(font: .subheadline))
                     Text(personalBirthday)
                         .modifier(CustomModifier(font: .caption))
@@ -380,14 +380,14 @@ public struct UserNameCellView: View {
                 }
 
                 HStack(spacing: 8){
-                    Text("HomeReadInfoAgeLabel")
+                    Text("HomeReadInfoAgeLabel", bundle: .module)
                         .modifier(CustomModifier(font: .subheadline))
                     Text(personalAge)
                         .modifier(CustomModifier(font: .caption))
                 }
 
                 HStack(spacing: 8){
-                    Text("HomeReadInfoSexLabel")
+                    Text("HomeReadInfoSexLabel", bundle: .module)
                         .modifier(CustomModifier(font: .subheadline))
                     Text(personalSex)
                         .modifier(CustomModifier(font: .caption))
@@ -395,14 +395,14 @@ public struct UserNameCellView: View {
                 }
 
                 HStack(spacing: 8){
-                    Text("HomeReadInfoAddressLabel")
+                    Text("HomeReadInfoAddressLabel", bundle: .module)
                         .modifier(CustomModifier(font: .subheadline))
                     Text(personalAddress)
                         .modifier(CustomModifier(font: .caption))
                         .lineLimit(3)
                 }
                 HStack(spacing: 8){
-                    Text("HomeReadInfoEmailLabel")
+                    Text("HomeReadInfoEmailLabel", bundle: .module)
                         .modifier(CustomModifier(font: .subheadline))
                     Text(personalEmail)
                         .modifier(CustomModifier(font: .caption))
@@ -411,7 +411,7 @@ public struct UserNameCellView: View {
                 }
 
                 HStack(spacing: 8){
-                    Text("HomeReadInfoPhoneLabel")
+                    Text("HomeReadInfoPhoneLabel", bundle: .module)
                         .modifier(CustomModifier(font: .subheadline))
                     Text(personalPhone)
                         .modifier(CustomModifier(font: .caption))
