@@ -2,6 +2,9 @@
 import SwiftUI
 
 public struct TutorialRequest: View {
+    public init(){
+    }
+    
     // MARK: AppStorage
     @AppStorage("mnc_register_status") var mncRegisterStatus: Bool = true
     
