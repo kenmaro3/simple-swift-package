@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  
+
+  Created by Kentaro Mihara on 2023/10/10.
+  
+*/
+
+"MNCRegisterScanLabel" = "マイナンバーカードの";
+"MNCRegisterScanLabel2" = "\nスキャンが必要です。";
+"MNCRegisterScanSecondLabel1" = "マイナンバーカードを利用した同意を実行可能にするために、証明書の登録が必要です。";
+"MNCRegisterScanSecondLabel2" = "\nこの登録によって特定個人情報がアップロードされることはありません。";
+"MNCRegisterScanSecondLabel3" = "\n\nスマートフォンをマイナンバーカードにかざして、数秒間キープしてください。\n成功すると画面が進みます。";
+"MNCRegisterScanSkipButtonLabel" = "今はスキップ";
