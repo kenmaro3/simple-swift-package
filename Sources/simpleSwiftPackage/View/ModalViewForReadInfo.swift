@@ -130,7 +130,7 @@ public struct ModalViewForReadInfoFromMNC: View, IndividualNumberReaderSessionDe
     @State var defaultBlurRadius: CGFloat = 0
     @State var defaultSaturationAmount: CGFloat = 0
     
-    @AppStorage("personal_name") var personalName: String = ""
+    @AppStorage("authblue_personal_name") var personalName: String = ""
     
     let mncGroup = DispatchGroup()
     let mncPinGroup = DispatchGroup()
@@ -138,24 +138,6 @@ public struct ModalViewForReadInfoFromMNC: View, IndividualNumberReaderSessionDe
     public var body: some View {
         NavigationStack{
             VStack(){
-//                HStack(){
-//                    Spacer()
-//                    Button(action: {
-//                        // Action to perform when the button is tapped
-//
-//                    }) {
-//
-//                    }
-//                    .foregroundColor(.black)
-//                    .padding(.horizontal, 25)
-//                    .padding(.vertical)
-//                    .background{
-//                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-//                            .fill(.black.opacity(0.05))
-//                    }
-//                }
-//                .padding(.trailing, 25)
-//                .padding(.bottom, 32)
                 
                 UserNameCellView(
                     activateGlassMorphism: $activateGlassMorphism,
@@ -231,17 +213,6 @@ public struct ModalViewForReadInfoFromMNC: View, IndividualNumberReaderSessionDe
             getBasicInfoFromMnc()
         }
         
-//        mncPinGroup.notify(queue: .global()) {
-//            print("mncPinGroup: notified")
-//            if(pin == "" || pin.count != 4){
-//            }else{
-//                mncGroup.enter()
-//                getBasicInfoFromMnc()
-//                mncGroup.notify(queue: .global()) {
-//                    print("mncGroup: notified")
-//                }
-//            }
-//        }
         
     }
     
@@ -262,13 +233,13 @@ public struct UserNameCellView: View {
     @Binding var defaultBlurRadius: CGFloat
     @Binding var defaultSaturationAmount: CGFloat
     
-    @AppStorage("personal_name") var personalName: String = ""
-    @AppStorage("personal_birthday") var personalBirthday: String = ""
-    @AppStorage("personal_age") var personalAge: String = ""
-    @AppStorage("personal_sex") var personalSex: String = ""
-    @AppStorage("personal_address") var personalAddress: String = ""
-    @AppStorage("personal_phone") var personalPhone: String = ""
-    @AppStorage("personal_email") var personalEmail: String = ""
+    @AppStorage("authblue_personal_name") var personalName: String = ""
+    @AppStorage("authblue_personal_birthday") var personalBirthday: String = ""
+    @AppStorage("authblue_personal_age") var personalAge: String = ""
+    @AppStorage("authblue_personal_sex") var personalSex: String = ""
+    @AppStorage("authblue_personal_address") var personalAddress: String = ""
+    @AppStorage("authblue_personal_phone") var personalPhone: String = ""
+    @AppStorage("authblue_personal_email") var personalEmail: String = ""
     
     
     
@@ -298,15 +269,6 @@ public struct UserNameCellView: View {
                     .padding(.horizontal, 20)
                 
                 
-//                VStack(spacing: 12){
-//                    LogoutButton()
-//                        .foregroundColor(.black)
-//                    DeleteAccountButton(
-//                        goToMncRegister: $showMncRegister)
-//                    .foregroundColor(.black)
-//                }
-//                .frame(maxHeight: .infinity, alignment: .bottom)
-//                .padding(15)
             }
     }
             // MARK: GlassMorphism Card

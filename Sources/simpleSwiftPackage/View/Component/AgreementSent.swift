@@ -1,14 +1,14 @@
 import SwiftUI
 
 struct AgreementSent: View {
-    @AppStorage("dynamic_link_status") var dynamicLinkStatus: Bool = false
-    @AppStorage("dynamic_link_client_id") var dynamicLinkClientId: String = ""
-    @AppStorage("dynamic_link_client_name") var dynamicLinkClientName: String = ""
-    @AppStorage("dynamic_link_content") var dynamicLinkContent: String = ""
-    @AppStorage("dynamic_link_agreement_method") var dynamicLinkAgreementMethod: String = ""
-    @AppStorage("dynamic_link_requesting_info") var dynamicLinkRequestingInfo: String = ""
+    @AppStorage("authblue_dynamic_link_status") var dynamicLinkStatus: Bool = false
+    @AppStorage("authblue_dynamic_link_client_id") var dynamicLinkClientId: String = ""
+    @AppStorage("authblue_dynamic_link_client_name") var dynamicLinkClientName: String = ""
+    @AppStorage("authblue_dynamic_link_content") var dynamicLinkContent: String = ""
+    @AppStorage("authblue_dynamic_link_agreement_method") var dynamicLinkAgreementMethod: String = ""
+    @AppStorage("authblue_dynamic_link_requesting_info") var dynamicLinkRequestingInfo: String = ""
     
-    @AppStorage("tutorial_finished") var tutorialFinished: Bool = false
+    @AppStorage("authblue_tutorial_finished") var tutorialFinished: Bool = false
     
 
     
@@ -99,9 +99,3 @@ struct AgreementSent: View {
         
     }
 }
-//
-//struct AgreementSent_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AgreementSent()
-//    }
-//}

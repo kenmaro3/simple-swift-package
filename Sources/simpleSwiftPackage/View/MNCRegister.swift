@@ -12,7 +12,6 @@ import ASN1Decoder
 public struct MNCRegister: View, IndividualNumberReaderSessionDelegate  {
     @State private var isSkipped: Bool = false
     // MARK: App Mnc Register Status
-    //@AppStorage("mnc_register_status") var mncRegisterStatus: Bool = false
     public var handler: (ResultHandler<CertificateRegisterResponseAPI>)
     
     public init(handler: @escaping (ResultHandler<CertificateRegisterResponseAPI>)){

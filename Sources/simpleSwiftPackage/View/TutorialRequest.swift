@@ -6,21 +6,21 @@ public struct TutorialRequest: View {
     }
     
     // MARK: AppStorage
-    @AppStorage("mnc_register_status") var mncRegisterStatus: Bool = true
+    @AppStorage("authblue_mnc_register_status") var mncRegisterStatus: Bool = true
     
-    @AppStorage("personal_name") var personalName: String = ""
-    @AppStorage("personal_birthday") var personalBirthday: String = ""
-    @AppStorage("personal_age") var personalAge: String = ""
-    @AppStorage("personal_sex") var personalSex: String = ""
-    @AppStorage("personal_address") var personalAddress: String = ""
-    @AppStorage("personal_phone") var personalPhone: String = ""
-    @AppStorage("personal_email") var personalEmail: String = ""
+    @AppStorage("authblue_personal_name") var personalName: String = ""
+    @AppStorage("authblue_personal_birthday") var personalBirthday: String = ""
+    @AppStorage("authblue_personal_age") var personalAge: String = ""
+    @AppStorage("authblue_personal_sex") var personalSex: String = ""
+    @AppStorage("authblue_personal_address") var personalAddress: String = ""
+    @AppStorage("authblue_personal_phone") var personalPhone: String = ""
+    @AppStorage("authblue_personal_email") var personalEmail: String = ""
     
-    @AppStorage("dynamic_link_status") var dynamicLinkStatus: Bool = false
-    @AppStorage("dynamic_link_client_id") var dynamicLinkClientId: String = ""
-    @AppStorage("dynamic_link_client_name") var dynamicLinkClientName: String = ""
+    @AppStorage("authblue_dynamic_link_status") var dynamicLinkStatus: Bool = false
+    @AppStorage("authblue_dynamic_link_client_id") var dynamicLinkClientId: String = ""
+    @AppStorage("authblue_dynamic_link_client_name") var dynamicLinkClientName: String = ""
     
-    @AppStorage("tutorial_finished") var tutorialFinished: Bool = false
+    @AppStorage("authblue_tutorial_finished") var tutorialFinished: Bool = false
     
     
     // MARK: Transition
