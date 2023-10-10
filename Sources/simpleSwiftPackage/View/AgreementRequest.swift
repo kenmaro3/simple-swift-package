@@ -408,6 +408,6 @@ struct AgreementRequest_Previews: PreviewProvider {
         let content: String = "Transfer your activity log to Facebook for service improvement"
         let agreementModel: AgreementModel = AgreementModel(name: false, birthday: true, age: true, picture: false, sex: true, address: false, phone: false, email: false)
 //        AgreementRequest(clientName: client_name, clientId: clientId, agreementMethods: methods, content: content, requestingInfo: agreementModel)
-        AgreementRequest()
+        AgreementRequest(handler: {}())
     }
 }
