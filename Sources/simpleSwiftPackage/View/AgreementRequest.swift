@@ -341,7 +341,7 @@ public struct AgreementRequest: View {
                     goToAgreementSent = false
                     goToAgreementSteps = false
                 }){
-                    Text("DeepLinkAgreementCancel")
+                    Text("DeepLinkAgreementCancel", bundle: .module)
                         .fontWeight(.semibold)
                         .frame(width: 120, height: 32)
                         .foregroundColor(Color(.white))
