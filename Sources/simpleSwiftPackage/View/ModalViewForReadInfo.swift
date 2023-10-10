@@ -10,10 +10,10 @@ import TRETJapanNFCReader_MIFARE_IndividualNumber
 import SwiftASN1
 
 public struct ModalViewForReadInfoFromMNC: View, IndividualNumberReaderSessionDelegate {
-    public init(
-        //handler: @escaping (ResultHandler<CertificateRegisterResponseAPI>)
-    ){
-        //self.handler = handler
+    public var handler: ()
+    
+    public init(handler: ()){
+        self.handler = handler
     }
     
     func cardDataRawToEachInfo(data: TRETJapanNFCReader_MIFARE_IndividualNumber.IndividualNumberCardData){
@@ -103,6 +103,8 @@ public struct ModalViewForReadInfoFromMNC: View, IndividualNumberReaderSessionDe
         }
         
         setSex(sex_string)
+        
+        handler
         
     }
     

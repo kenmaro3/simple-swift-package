@@ -1,8 +1,12 @@
 import SwiftUI
 
 public struct AgreementRequest: View {
-    public init(){
+    public var handler: ()
+    
+    public init(handler: ()){
+        self.handler = handler
     }
+    
     
     // MARK: AppStorage
     @AppStorage("authblue_mnc_register_status") var mncRegisterStatus: Bool = false
@@ -183,8 +187,6 @@ public struct AgreementRequest: View {
                 let size = $0.size
                 AgreementSent(size: size, hideViewSent: $hideViewSent)
             }
-        }else if(willMoveToHomeScreen){
-            Text("this is home")
         }else{
             GeometryReader{
                 let size = $0.size
@@ -337,6 +339,7 @@ public struct AgreementRequest: View {
             .overlay(alignment: .topTrailing){
                 Button(action: {
                     deleteAppStorageForDynamicLink()
+                    handler
                     willMoveToHomeScreen = true
                     goToAgreementSent = false
                     goToAgreementSteps = false
