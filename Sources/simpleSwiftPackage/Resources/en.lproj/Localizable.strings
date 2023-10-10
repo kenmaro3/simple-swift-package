@@ -12,3 +12,11 @@
 "MNCRegisterScanSecondLabel2" = "to register your certificate from my number card";
 "MNCRegisterScanSecondLabel3" = "\nto proceed forward";
 "MNCRegisterScanSkipButtonLabel" = "Skip";
+
+"HomeReadInfoNameLabel" = "Name";
+"HomeReadInfoBirthdayLabel" = "Birthday";
+"HomeReadInfoAgeLabel" = "Age";
+"HomeReadInfoSexLabel" = "Sex";
+"HomeReadInfoAddressLabel" = "Address";
+"HomeReadInfoEmailLabel" = "Email";
+"HomeReadInfoPhoneLabel" = "Phone";

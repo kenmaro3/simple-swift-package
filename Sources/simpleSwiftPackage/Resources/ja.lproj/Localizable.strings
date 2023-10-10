@@ -12,3 +12,15 @@
 "MNCRegisterScanSecondLabel2" = "\nこの登録によって特定個人情報がアップロードされることはありません。";
 "MNCRegisterScanSecondLabel3" = "\n\nスマートフォンをマイナンバーカードにかざして、数秒間キープしてください。\n成功すると画面が進みます。";
 "MNCRegisterScanSkipButtonLabel" = "今はスキップ";
+
+"HomeReadInfoNameLabel" = "氏名";
+"HomeReadInfoBirthdayLabel" = "生年月日";
+"HomeReadInfoAgeLabel" = "年齢";
+"HomeReadInfoSexLabel" = "性別";
+"HomeReadInfoAddressLabel" = "住所";
+"HomeReadInfoEmailLabel" = "メールアドレス";
+"HomeReadInfoPhoneLabel" = "電話番号";
+"HomeReadInfoSexLabelMan" = "男性";
+"HomeReadInfoSexLabelWoman" = "女性";
+"HomeReadInfoSexLabelNotApplicable" = "適用不能";
+"HomeReadInfoSexLabelUnknown" = "不明";

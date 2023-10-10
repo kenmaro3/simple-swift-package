@@ -19,6 +19,15 @@
       }
     },
     {
+      "identity" : "swift-asn1",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-asn1",
+      "state" : {
+        "revision" : "475835389488c1d93bc06522db76c0b89c54df4d",
+        "version" : "0.10.0"
+      }
+    },
+    {
       "identity" : "tretjapannfcreader",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kenmaro3/TRETJapanNFCReader.git",
