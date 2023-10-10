@@ -77,6 +77,9 @@ public struct MNCRegister: View, IndividualNumberReaderSessionDelegate  {
     // MARK: App Mnc Register Status
     @AppStorage("mnc_register_status") var mncRegisterStatus: Bool = false
     
+    public init(){
+    }
+    
     public func individualNumberReaderSession(didRead individualNumberCardData: TRETJapanNFCReader_MIFARE_IndividualNumber.IndividualNumberCardData) {
         print("individualNumberReaderSession")
         print(individualNumberCardData)
