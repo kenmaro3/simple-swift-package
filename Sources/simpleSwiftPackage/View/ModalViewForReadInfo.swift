@@ -10,7 +10,14 @@ import TRETJapanNFCReader_MIFARE_IndividualNumber
 import SwiftASN1
 
 public struct ModalViewForReadInfoFromMNC: View, IndividualNumberReaderSessionDelegate {
+    public init(
+        //handler: @escaping (ResultHandler<CertificateRegisterResponseAPI>)
+    ){
+        //self.handler = handler
+    }
+    
     func cardDataRawToEachInfo(data: TRETJapanNFCReader_MIFARE_IndividualNumber.IndividualNumberCardData){
+        
         
         guard var dataRaw = data.raw else{
             return
@@ -248,7 +255,7 @@ public struct ModalViewForReadInfoFromMNC: View, IndividualNumberReaderSessionDe
 }
 
 
-struct UserNameCellView: View {
+public struct UserNameCellView: View {
     // MARK: GlassMorphism Properties
     @Binding var activateGlassMorphism: Bool
     @Binding var blurView: UIVisualEffectView
