@@ -1,9 +1,9 @@
 import SwiftUI
 
 public struct AgreementRequest: View {
-    public var handler: ()
+    public var handler: ((Bool) -> Void)
     
-    public init(handler: ()){
+    public init(handler: @escaping ((Bool) -> Void)){
         self.handler = handler
     }
     
@@ -339,7 +339,7 @@ public struct AgreementRequest: View {
             .overlay(alignment: .topTrailing){
                 Button(action: {
                     deleteAppStorageForDynamicLink()
-                    handler
+                    handler(true)
                     willMoveToHomeScreen = true
                     goToAgreementSent = false
                     goToAgreementSteps = false
@@ -408,6 +408,7 @@ struct AgreementRequest_Previews: PreviewProvider {
         let content: String = "Transfer your activity log to Facebook for service improvement"
         let agreementModel: AgreementModel = AgreementModel(name: false, birthday: true, age: true, picture: false, sex: true, address: false, phone: false, email: false)
 //        AgreementRequest(clientName: client_name, clientId: clientId, agreementMethods: methods, content: content, requestingInfo: agreementModel)
-        AgreementRequest(handler: {}())
+        AgreementRequest { _ in
+        }
     }
 }

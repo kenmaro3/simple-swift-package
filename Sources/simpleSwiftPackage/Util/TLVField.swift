@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Kentaro Mihara on 2023/10/10.
-//
-
 import Foundation
 
 public struct TLVField {

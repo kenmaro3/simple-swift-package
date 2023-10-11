@@ -10,11 +10,12 @@ import TRETJapanNFCReader_MIFARE_IndividualNumber
 import SwiftASN1
 
 public struct ModalViewForReadInfoFromMNC: View, IndividualNumberReaderSessionDelegate {
-    public var handler: ()
+    public var handler: ((UserInfoFromMyNumber) -> Void)
     
-    public init(handler: ()){
+    public init(handler: @escaping ((UserInfoFromMyNumber) -> Void)){
         self.handler = handler
     }
+    
     
     func cardDataRawToEachInfo(data: TRETJapanNFCReader_MIFARE_IndividualNumber.IndividualNumberCardData){
         
@@ -90,6 +91,7 @@ public struct ModalViewForReadInfoFromMNC: View, IndividualNumberReaderSessionDe
         //dateFormatter.timeZone = TimeZone(identifier: "Etc/GMT") // 世界標準時
         
         let birthDate = dateFormatter.date(from: birth_string)
+        var age_string = "-1"
         if let birthDate{
             let birthDateComponents = Calendar.current.dateComponents(in: TimeZone.current, from: birthDate)
             // 年齢を算出します
@@ -99,12 +101,17 @@ public struct ModalViewForReadInfoFromMNC: View, IndividualNumberReaderSessionDe
             let age = ageComponents.year
             if let age{
                 setAge(String(age))
+                age_string = String(age)
             }
         }
         
         setSex(sex_string)
         
-        handler
+        var res = UserInfoFromMyNumber(
+            name: name_string, address: address_string, birth: birth_string, age: age_string, sex: sex_string
+        )
+        
+        handler(res)
         
     }
     
