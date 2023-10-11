@@ -185,7 +185,7 @@ public struct AgreementRequest: View {
         }else if (goToAgreementSent){
             GeometryReader{
                 let size = $0.size
-                AgreementSent(size: size, hideViewSent: $hideViewSent)
+                AgreementSent(handler: handler, size: size, hideViewSent: $hideViewSent)
             }
         }else{
             GeometryReader{

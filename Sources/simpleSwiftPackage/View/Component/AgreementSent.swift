@@ -1,6 +1,15 @@
 import SwiftUI
 
 struct AgreementSent: View {
+    
+    public var handler: ((Bool) -> Void)
+    
+    /// Animation Properties
+    var size: CGSize
+    @State private var showView: Bool = false
+    @Binding var hideViewSent : Bool
+
+    
     @AppStorage("authblue_dynamic_link_status") var dynamicLinkStatus: Bool = false
     @AppStorage("authblue_dynamic_link_client_id") var dynamicLinkClientId: String = ""
     @AppStorage("authblue_dynamic_link_client_name") var dynamicLinkClientName: String = ""
@@ -11,12 +20,6 @@ struct AgreementSent: View {
     @AppStorage("authblue_tutorial_finished") var tutorialFinished: Bool = false
     
 
-    
-    /// Animation Properties
-    var size: CGSize
-    @State private var showView: Bool = false
-    @Binding var hideViewSent : Bool
-    
     func deleteAppStorageForDynamicLink(){
         dynamicLinkStatus = false
         dynamicLinkClientId = ""
@@ -54,6 +57,7 @@ struct AgreementSent: View {
                 Button(action: {
                     withAnimation(.spring(response: 0.8, dampingFraction: 0.8, blendDuration: 0)){
                         hideViewSent = true
+                        handler(true)
                     }
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){

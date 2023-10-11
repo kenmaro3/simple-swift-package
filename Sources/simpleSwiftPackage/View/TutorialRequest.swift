@@ -2,9 +2,11 @@
 import SwiftUI
 
 public struct TutorialRequest: View {
-    public init(){
-    }
+    public var handler: ((Bool) -> Void)
     
+    public init(handler: @escaping ((Bool) -> Void)){
+        self.handler = handler
+    }
     // MARK: AppStorage
     @AppStorage("authblue_mnc_register_status") var mncRegisterStatus: Bool = true
     
@@ -192,7 +194,7 @@ public struct TutorialRequest: View {
         }else if (goToAgreementSent){
             GeometryReader{
                 let size = $0.size
-                AgreementSent(size: size, hideViewSent: $hideViewSent)
+                AgreementSent(handler: handler, size: size, hideViewSent: $hideViewSent)
             }
         }else if(willMoveToHomeScreen){
             Text("this is home")
@@ -420,6 +422,3 @@ public struct TutorialRequest: View {
     
 }
 
-#Preview {
-    TutorialRequest()
-}
